@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #121212;
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(135deg, #7289DA, #99AAB5);
+    animation: gradientShift 10s ease infinite;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(135deg, #7289DA, #99AAB5);
+    }
+    50% {
+        background: linear-gradient(135deg, #5865F2, #99AAB5);
+    }
+    100% {
+        background: linear-gradient(135deg, #7289DA, #99AAB5);
+    }
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #5865F2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #404EED;
+}
+
+.server-info {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.server-preview {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1E1E1E;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.channel-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.channel-card {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.channel-card:hover {
+    transform: scale(1.05);
+}
+
+.channel-card i {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.testimonials {
+    padding: 60px 20px;
+    background-color: #2C2F33;
+    text-align: center;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+    width: 300px;
+    text-align: center;
+}
+
+footer {
+    background-color: #1E1E1E;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 2em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #7289DA;
+}
