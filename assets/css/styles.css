@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     color: #fff;
@@ -11,12 +15,13 @@ body {
     line-height: 1.6;
 }
 
+/* Hero Section */
 .hero {
     padding: 60px 20px;
     text-align: center;
-    background: linear-gradient(270deg, #B2DFFC, #86C5F8, #5CAFF2, #2A8FE8, #005FCC); /* Multiple blue color stops */
-    background-size: 800% 800%; /* Expand background for smoother scrolling */
-    animation: gradientScroll 30s ease infinite; /* 30s for a smooth, slow scroll */
+    background: linear-gradient(270deg, #B2DFFC, #86C5F8, #5CAFF2, #2A8FE8, #005FCC);
+    background-size: 800% 800%;
+    animation: gradientScroll 30s ease infinite;
 }
 
 @keyframes gradientScroll {
@@ -90,6 +95,7 @@ h2 {
     width: 300px;
     text-align: center;
     transition: transform 0.3s;
+    max-width: 100%; /* Ensure cards don't exceed the screen width */
 }
 
 .channel-card:hover {
@@ -101,15 +107,20 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* Testimonials Section */
 .testimonials {
     padding: 60px 20px;
     background-color: #2C2F33;
     text-align: center;
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
 }
 
 .testimonial-slider {
     display: flex;
-    justify-content: center;
+    overflow: hidden; /* Hide overflowing testimonials */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    white-space: nowrap; /* Prevent wrapping, enable horizontal scroll */
 }
 
 .testimonial {
@@ -118,9 +129,39 @@ h2 {
     border-radius: 10px;
     margin: 0 10px;
     width: 300px;
+    display: inline-block; /* Ensure each testimonial is treated as a block in the scroll */
+    white-space: normal; /* Allow text to wrap inside the testimonial */
     text-align: center;
 }
 
+/* Scroll Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+/* Footer Section */
 footer {
     background-color: #1E1E1E;
     padding: 40px 20px;
@@ -141,4 +182,53 @@ footer {
 
 .social-links a:hover {
     color: #7289DA;
+}
+
+/* Mobile View Fixes */
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding: 40px 15px; /* Reduce padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduce font size */
+    }
+
+    p {
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .cta-button {
+        padding: 12px 25px; /* Reduce padding on the button */
+        font-size: 1em;
+    }
+
+    .channel-grid {
+        flex-direction: column; /* Stack the cards vertically on mobile */
+        align-items: center; /* Center-align the cards */
+    }
+
+    .channel-card {
+        width: 90%; /* Make the cards take up most of the screen width */
+        margin-bottom: 15px; /* Reduce the margin between cards */
+    }
+
+    .testimonial-slider {
+        flex-direction: column; /* Stack testimonials vertically on mobile */
+        align-items: center; /* Center-align testimonials */
+        padding: 0; /* Remove extra padding */
+    }
+
+    .testimonial {
+        width: 90%; /* Make the testimonials take up most of the screen width */
+        margin-bottom: 15px; /* Add space between testimonials */
+    }
+
+    footer {
+        padding: 20px 10px; /* Reduce padding in the footer */
+    }
+
+    .social-links a {
+        font-size: 1.5em; /* Adjust social icon size for mobile */
+    }
 }
