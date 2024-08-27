@@ -4,7 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banabyte Discord Invitation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join the Banabyte Discord community! Connect with like-minded individuals, participate in fun events, and enjoy our gaming and radio services.">
+    <meta name="keywords" content="Banabyte, Discord, Community, Gaming, Radio, Servers, Social, Join Discord">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Banabyte">
+
+    <!-- Open Graph Meta Tags (For social sharing) -->
+    <meta property="og:title" content="Join the Banabyte Discord Community">
+    <meta property="og:description" content="Connect with gamers and community members at Banabyte Discord. Join now!">
+    <meta property="og:image" content="https://yourwebsite.com/assets/images/banabyte-thumbnail.jpg"> <!-- Replace with your thumbnail image -->
+    <meta property="og:url" content="https://discord.banabyte.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join the Banabyte Discord Community">
+    <meta name="twitter:description" content="Connect with gamers and community members at Banabyte Discord. Join now!">
+    <meta name="twitter:image" content="https://yourwebsite.com/assets/images/banabyte-thumbnail.jpg"> <!-- Replace with your thumbnail image -->
+
+    <!-- Structured Data (JSON-LD for rich snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Banabyte Discord Community",
+      "url": "https://discord.banabyte.com",
+      "logo": "https://yourwebsite.com/assets/images/banabyte-logo.png",  <!-- Replace with your logo -->
+      "description": "Join the Banabyte Discord community! Connect with like-minded individuals, participate in fun events, and enjoy our gaming and radio services.",
+      "sameAs": [
+        "https://discord.gg/banabyte-757079346719621150",
+        "https://banabyte.com", <!-- Replace with your Twitter handle -->
+        "https://github.com/Banabyte"
+      ]
+    }
+    </script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -47,23 +88,33 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <h2>What Our Members Say</h2>
-        <button class="arrow arrow-left">&laquo;</button>
-        <div class="testimonial-slider" id="testimonial-slider">
-            <div class="testimonial">
-                <p>"Banabyte is a fun and great place to meet new friends and have fun playing games!"</p>
-                <span><i class="fas fa-user-circle"></i> - @Shorkboi</span>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial">
+                        <p>"Banabyte is a fun and great place to meet new friends and have fun playing games!"</p>
+                        <span><i class="fas fa-user-circle"></i> - @Shorkboi</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial">
+                        <p>"This website is so cool, it blew my shoes off!"</p>
+                        <span><i class="fas fa-user-circle"></i> - @blocky_puto</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial">
+                        <p>"Minecraft!"</p>
+                        <span><i class="fas fa-user-circle"></i> - @random98</span>
+                    </div>
+                </div>
+                <!-- Add more swiper slides for more testimonials -->
             </div>
-            <div class="testimonial">
-                <p>"This website is so cool, it blew my shoes off!"</p>
-                <span><i class="fas fa-user-circle"></i> - @blocky_puto</span>
-            </div>
-            <div class="testimonial">
-                <p>"Minecraft!"</p>
-                <span><i class="fas fa-user-circle"></i> - @random98</span>
-            </div>
-            <!-- Add more testimonials here -->
+            <!-- Add Pagination and Navigation Arrows if needed -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-        <button class="arrow arrow-right">&raquo;</button>
     </section>
 
     <!-- Footer Section -->
@@ -78,6 +129,8 @@
         </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

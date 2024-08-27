@@ -6,6 +6,7 @@
 
 html, body {
     overflow-x: hidden; /* Prevent horizontal overflow */
+    width: 100%; /* Ensure the body and html do not extend beyond the viewport */
 }
 
 body {
@@ -116,11 +117,13 @@ h2 {
     overflow: hidden; /* Prevent overflow */
 }
 
-.testimonial-slider {
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-wrapper {
     display: flex;
-    overflow: hidden; /* Hide overflowing testimonials */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    white-space: nowrap; /* Prevent wrapping, enable horizontal scroll */
+    align-items: center;
 }
 
 .testimonial {
@@ -129,36 +132,26 @@ h2 {
     border-radius: 10px;
     margin: 0 10px;
     width: 300px;
-    display: inline-block; /* Ensure each testimonial is treated as a block in the scroll */
-    white-space: normal; /* Allow text to wrap inside the testimonial */
+    display: inline-block;
+    white-space: normal;
     text-align: center;
 }
 
-/* Scroll Arrows */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2em;
-    background-color: rgba(0, 0, 0, 0.5);
+/* Swiper Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
     color: white;
-    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
-    cursor: pointer;
-    z-index: 10;
+    border-radius: 50%;
     transition: background-color 0.3s;
 }
 
-.arrow:hover {
+.swiper-button-next:hover, .swiper-button-prev:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.arrow-left {
-    left: 10px;
-}
-
-.arrow-right {
-    right: 10px;
+.swiper-pagination-bullet {
+    background-color: white;
 }
 
 /* Footer Section */
@@ -187,48 +180,46 @@ footer {
 /* Mobile View Fixes */
 @media only screen and (max-width: 768px) {
     .hero {
-        padding: 40px 15px; /* Reduce padding for smaller screens */
+        padding: 40px 15px;
     }
 
     h1 {
-        font-size: 2em; /* Reduce font size */
+        font-size: 2em;
     }
 
     p {
-        font-size: 1em; /* Adjust font size */
+        font-size: 1em;
     }
 
     .cta-button {
-        padding: 12px 25px; /* Reduce padding on the button */
+        padding: 12px 25px;
         font-size: 1em;
     }
 
     .channel-grid {
-        flex-direction: column; /* Stack the cards vertically on mobile */
-        align-items: center; /* Center-align the cards */
+        flex-direction: column;
+        align-items: center;
     }
 
     .channel-card {
-        width: 90%; /* Make the cards take up most of the screen width */
-        margin-bottom: 15px; /* Reduce the margin between cards */
+        width: 90%;
+        margin-bottom: 15px;
     }
 
-    .testimonial-slider {
-        flex-direction: column; /* Stack testimonials vertically on mobile */
-        align-items: center; /* Center-align testimonials */
-        padding: 0; /* Remove extra padding */
+    .swiper-container {
+        width: 100%;
     }
 
     .testimonial {
-        width: 90%; /* Make the testimonials take up most of the screen width */
-        margin-bottom: 15px; /* Add space between testimonials */
+        width: 90%;
+        margin-bottom: 15px;
     }
 
     footer {
-        padding: 20px 10px; /* Reduce padding in the footer */
+        padding: 20px 10px;
     }
 
     .social-links a {
-        font-size: 1.5em; /* Adjust social icon size for mobile */
+        font-size: 1.5em;
     }
 }
